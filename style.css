@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Open+Sans:ital@0;1&family=Satisfy&display=swap');
+
+:root {
+    --white: rgb(249, 252, 252);
+    --main-font-fam: 'DM Sans', sans-serif;
+    --right-indent: max(4vw, 10px);
+    background-color: rgb(233, 237, 238);
+}
+
+.page {
+    display: flex;
+    width: 100vw;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    font-family: var(--main-font-fam);
+}
+
+.left-side {
+    width: 30vw;
+    height: 100vh;
+    text-align: center;
+}
+
+.left-side > .overlay > img {
+    width: 30%;
+}
+
+.left-side > .overlay {
+    color: black;
+    background-color: var(--white);
+    opacity: .7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    position: absolute;
+    top: 26vh;
+    width: 30vw;
+    height: calc(25px + 4vmax);
+    font-family: 'Satisfy', cursive;
+}
+
+.left-side > .overlay > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    font-size: calc(12px + 4vmax);
+    overflow: hidden;
+}
+
+.left-side > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.left-side > p {
+    position: absolute;
+    bottom: 0vh;
+    width: 30vw;
+    color: var(--white);
+    opacity: 60%;
+}
+
+.left-side > p > a {
+    color: var(--white);
+}
+
+.right-side {
+    width: calc(65vw - var(--right-indent));
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: rgb(37, 40, 46);
+}
+
+.right-side > p,
+.right-side > form > button {
+    position: relative;
+    left: var(--right-indent);
+}
+
+.right-side > p:first-child,
+.right-side > form > fieldset > p {
+    font-size: 18px;
+}
+
+.right-side > form > fieldset {
+    padding: 0 0 3vh var(--right-indent);
+    margin: 4vh 0 4vh 0;
+    width: 65vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: none;
+    margin-inline-start: 0px;
+    gap: min(10px, 1vh);
+    background-color: var(--white);
+    color: darkslategray;
+    box-shadow: 2px 5px 10px lightgray;
+    position: relative;
+    
+}
+
+.right-side > form > fieldset > .row {
+    font-size: calc(10px + .2vmax);
+    display: flex;
+    width: 100%;
+    gap: 3%;
+}
+
+.right-side > form > fieldset > .row > div {
+    display: flex;
+    flex-direction: column;
+    width: max(160px, 20vw);
+}
+
+.right-side > form > fieldset > .row > div > input {
+    border: 1px solid gray;
+    border-radius: 3px;
+    font-family: var(--main-font-fam);
+}
+
+.right-side > form > fieldset > .row > div > input:focus {
+    outline: 1px solid lightsteelblue;
+    border-radius: 3px;
+    box-shadow: 2px 2px 5px lightsteelblue;
+}
+
+.right-side > form > fieldset > .row > div > input:invalid {
+    background-color: rgba(255, 160, 122, 0.381);
+}
+
+.right-side > form > button {
+    width: max(120px, 15vw);
+    height: max(30px, 5vh);
+    color: var(--white);
+    background-color: rgb(200, 115, 54);
+    border: 1px solid rgb(174, 106, 42);
+    border-radius: 4px;
+    box-shadow: 2px 2px 4px lightgrey;
+}
+
+.right-side > form > button:hover {
+    background-color: rgb(174, 106, 42);
+}
+
+.right-side > p:last-child > a{
+    color: rgb(174, 106, 42);
+}
